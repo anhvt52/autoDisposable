@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         val hello = findViewById<TextView>(R.id.tvHello)
         btnSubmit.setOnClickListener {
-            val disposable = Observable.just("Hello, this text emitted by observable")
+            Observable.just("Hello, this text emitted by observable")
                 .delay(3000, TimeUnit.MILLISECONDS)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
@@ -32,8 +32,7 @@ class MainActivity : AppCompatActivity() {
                     },
                     { Log.e(TAG, "Error: ${it.message}") }
                 )
-            disposable.addTo(autoDisposable)
-            autoDisposable.add(disposable)
+                .addTo(autoDisposable) //magic here
         }
     }
 
