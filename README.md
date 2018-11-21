@@ -19,7 +19,7 @@ DIY Auto Disposable for RxJava with Lifecycle Architecture Component
 ```
 ### Add your Disposable to the auto disposable, that's it
 ```
-    var disposable = observable.subscribe(observer) 
+    var disposable = observable.subscribeWith(observer) 
     autoDisposable.add(disposable)
 ```
 
