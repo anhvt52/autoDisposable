@@ -1,5 +1,6 @@
 # autoDisposable
 DIY Auto Disposable for RxJava with Lifecycle Architecture Component
+Demo for my tech-blog https://medium.com/mindorks/autodisposable-for-rxjava-with-lifecycle-architecture-component-23dfcfa83a2
 
 ## Usage:
 ### Init your AutoDisposable:
